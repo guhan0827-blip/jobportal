@@ -1,5 +1,5 @@
 💼 Job Portal
-A full-stack Job Portal web application with a Spring Boot backend and a plain HTML/CSS/JS frontend, served locally via a Python HTTP server. Designed to connect job seekers with employers through a clean and interface.
+A full-stack Job Portal web application with a Spring Boot backend and a plain HTML/CSS/JS frontend, served locally via a Python HTTP server. Designed to connect job seekers with employers through a clean and responsive interface.
 🚀 Tech Stack
 Layer	Technology
 Backend	Java Spring Boot
@@ -13,20 +13,19 @@ jobportal/
 │       ├── java/
 │       │   └── com/jobportal/          # Spring Boot source files
 │       │       ├── controller/         # REST Controllers
-│       │       ├── entity/              # Entity / Data models
+│       │       ├── model/              # Entity / Data models
 │       │       ├── repository/         # JPA Repositories
-│       │       └──          
+│       │       └── service/            # Business logic
 │       └── resources/
 │           ├── application.properties  # Spring Boot config
 │           └── static/                 # (Optional static assets)
-├── frontendfiles/                           # HTML/CSS/JS frontend
-│   ├── index.html
-│   ├── style.css
-│   └── script.js 
-|   |__ search.css
-|   |__ search.html
-|   |__ form.html
-|   |__ search.js
+├── frontend/                           # HTML/CSS/JS frontend
+│   ├── index.html                      # Landing / Home page
+│   ├── style.css                       # Global styles
+│   ├── search.html                     # Job search page
+│   ├── search.js                       # Search functionality
+│   ├── search.css                      # Search page styles
+│   └── form.html                       # Job posting form
 ├── pom.xml                             # Maven dependencies
 └── README.md
 ⚠️ The frontend is not embedded in Spring Boot's templates — it's served separately using Python's built-in HTTP server.
@@ -55,17 +54,17 @@ A running database (MySQL / H2 — check application.properties)
    python3 -m http.server 8000
    The frontend will be accessible at: http://localhost:8000
    🌐 Features
-   🔍 Browse and search job listings
-   📝 Job seekers can apply for jobs
-   🏢 Employers can post job openings
-   📋 View and manage job applications
-5. 
+   🏠 Home page with job portal landing (index.html)
+   🔍 Search and browse job listings (search.html + search.js)
+   📝 Post a new job via form (form.html)
+   📄 View a specific job's details
+   
    🔗 API Endpoints (Spring Boot)
    Method	Endpoint	Description
-   GET	/jobapp	Get all job listings
+   GET	/jobapp	Fetch all job listings
    POST	/jobapp	Post a new job
-6. GET /SpecificJob fetching specificjob
-   Update these endpoints based on your actual controller mappings.
+   GET	/SpecificJob	Fetch a specific job
+   Base URL: http://localhost:8080
    🖼️ Screenshots
    (Add screenshots of your UI here)
    🤝 Contributing
