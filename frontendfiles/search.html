@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Job Portal</div>
+    <nav><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="form.html">Jobpost</a></li>
+      <li><a href="#">Login</a></li>
+    </ul></nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search jobs...">
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div class="results-layout">
+    <div class="left-panel">
+      <div class="result-count" id="resultCount">Loading...</div>
+      <div id="jobList"></div>
+    </div>
+    <div class="right-panel" id="detailPanel">
+      <div class="empty-state">
+        <p>Select a job to view details</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>

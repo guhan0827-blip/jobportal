@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job</title>
+  <link rel="stylesheet" href="style.css">  <!-- ✅ Add shared CSS for header -->
+  <style>
+    body {
+      background: #f2f4f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 700px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2c3e50;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    textarea { resize: none; }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Same header as index.html -->
+  <header>
+    <div class="logo">Job Portal</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="form-wrapper">
+    <div class="container">
+      <h2>Post a New Job</h2>
+      <form id="jobForm">
+
+        <div class="input-group">
+          <label>Job Title</label>
+          <input type="text" name="jobTitle" placeholder="Enter Job Title">
+        </div>
+
+        <div class="input-group">
+          <label>Company Name</label>
+          <input type="text" name="companyName" placeholder="Enter Company Name">
+        </div>
+
+        <div class="input-group">
+          <label>Location</label>
+          <input type="text" name="location" placeholder="Enter Location">
+        </div>
+
+        <div class="input-group">
+          <label>Job Type</label>
+          <select name="jobType">
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Internship</option>
+            <option>Remote</option>
+            <option>Contract</option>
+          </select>
+        </div>
+
+        <!-- ✅ Fixed: removed stray 'l' and broken <labe> tag -->
+        <div class="input-group">
+          <label>Salary</label>
+          <input type="text" name="salary" placeholder="₹ 3 LPA - ₹ 5 LPA">
+        </div>
+
+        <div class="input-group">
+          <label>Experience</label>
+          <input type="text" name="experience" placeholder="0-2 Years">
+        </div>
+
+        <div class="input-group">
+          <label>Skills Required</label>
+          <input type="text" name="skillsRequired" placeholder="Java, Spring Boot, MySQL">
+        </div>
+
+        <div class="input-group">
+          <label>Job Description</label>
+          <textarea name="jobDescription" rows="6"></textarea>
+        </div>
+
+        <div class="input-group">
+          <label>Application Deadline</label>
+          <input type="date" name="jobDeadline">
+        </div>
+
+        <button type="submit" class="submit-btn">Post Job</button>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
